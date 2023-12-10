@@ -1,12 +1,12 @@
 const hre = require("hardhat");
 
 async function main() {
-  const OceanToken = await hre.ethers.getContractFactory("OceanToken");
-  const oceanToken = await OceanToken.deploy(100000000, 50);
+  const SalToken = await hre.ethers.getContractFactory("SalToken");
+  const salToken = await SalToken.deploy(100000000, 50);
 
-  await oceanToken.deployed();
+  await salToken.deployed();
 
-  console.log("Ocean Token deployed: ", oceanToken.address);
+  console.log("Sal Token deployed: ", salToken.address);
 }
 
 main().catch((error) => {

@@ -11,7 +11,7 @@ contract SalToken is ERC20Capped, ERC20Burnable {
     address payable public owner;
     uint256 public blockReward;
 
-    constructor(uint256 cap, uint256 reward) ERC20("SalToken", "Sal") ERC20Capped(cap * (10 ** decimals())) {
+    constructor(uint256 cap, uint256 reward) ERC20("SalToken", "SAL") ERC20Capped(cap * (10 ** decimals())) {
         owner = payable(msg.sender);
         _mint(owner, 70000000 * (10 ** decimals()));
         blockReward = reward * (10 ** decimals());
